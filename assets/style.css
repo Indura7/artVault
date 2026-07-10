@@ -1,0 +1,51 @@
+/* Apply the background image to the navbar 🖼️ */
+.custom-navbar {
+  background-image: url('images/topnav-bg.png'); /* Replace with your image filename */
+  background-size: cover;          /* Makes sure the image stretches perfectly */
+  background-position: right center; /* aligns the pink/purple abstract shapes to the right side */
+  background-repeat: no-repeat;
+}
+
+/* Custom Active Link Underline Effect 🖌️ */
+.nav-link.active-art {
+  position: relative;
+  color: #5850ec !important; 
+}
+.nav-link.active-art::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, #2b6cb0, #d53f8c); 
+  border-radius: 1px;
+}
+
+/* Custom Outline Login Button 🔐 */
+.btn-outline-purple {
+  color: #5850ec;
+  border-color: #5850ec;
+  font-weight: 500;
+  background-color: transparent; /* Allows background image to peak through */
+}
+.btn-outline-purple:hover {
+  background-color: #5850ec;
+  color: white;
+}
+
+/* Custom Register Gradient Button 🚀 */
+.btn-gradient {
+  background: linear-gradient(90deg, #1d4ed8, #7e22ce); 
+  border: none;
+  font-weight: 500;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+.scaled-logo{
+    transform: scale(1.3); /* Scales up the logo by 30% 📈 */
+    transform-origin: left center;
+
+}
