@@ -25,7 +25,8 @@
 /* Custom Outline Login Button 🔐 */
 .btn-outline-purple {
   color: #5850ec;
-  border-color: #5850ec;
+  border-width: 3.5px;
+  border-color: #e03de6;
   font-weight: 500;
   background-color: transparent; /* Allows background image to peak through */
 }
@@ -45,7 +46,66 @@
 }
 
 .scaled-logo{
-    transform: scale(1.3); /* Scales up the logo by 30% 📈 */
+    transform: scale(1.8); 
     transform-origin: left center;
 
+}
+
+
+
+/* footer section*/
+
+.footer-art {
+  background-image: url('images/footer-bg.png'); 
+  background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+/* Custom Custom Arrow Lists (>) 🏹 */
+.footer-links a {
+  color: #5c636a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: padding-left 0.2s ease;
+}
+.footer-links li {
+  position: relative;
+  padding-left: 15px;
+}
+.footer-links li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: #d53f8c; /* Vivid Pink Arrow */
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.footer-links a:hover {
+  color: #1d4ed8;
+  padding-left: 4px;
+}
+
+
+.social-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #000000;
+  color: #ffffff !important;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.social-icon-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Reusing your custom Subscribe Register button styles 🚀 */
+.btn-gradient {
+  background: linear-gradient(90deg, #1d4ed8, #7e22ce); 
+  border: none;
 }
