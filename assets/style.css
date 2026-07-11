@@ -1,41 +1,58 @@
-/* Apply the background image to the navbar 🖼️ */
+
 .custom-navbar {
-  background-image: url('images/topnav-bg.png'); /* Replace with your image filename */
-  background-size: cover;          /* Makes sure the image stretches perfectly */
-  background-position: right center; /* aligns the pink/purple abstract shapes to the right side */
+  background-image: url('images/topnav-bg.png');
+  background-size: cover;          
+  background-position: right center; 
   background-repeat: no-repeat;
 }
 
-/* Custom Active Link Underline Effect 🖌️ */
-.nav-link.active-art {
+.navbar-nav .nav-link {
   position: relative;
-  color: #5850ec !important; 
-}
-.nav-link.active-art::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: -5px;
-  left: 0;
-  background: linear-gradient(90deg, #2b6cb0, #d53f8c); 
-  border-radius: 1px;
+  color: #5c636a;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Custom Outline Login Button 🔐 */
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: #5850ec !important;
+}
+
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0; 
+  height: 3px; 
+  background: linear-gradient(90deg, #1d4ed8, #d53f8c); 
+  border-radius: 2px;
+  transition: width 0.3s ease; 
+}
+
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+  width: 100%; 
+}
+
+
+
 .btn-outline-purple {
   color: #5850ec;
   border-width: 3.5px;
   border-color: #e03de6;
   font-weight: 500;
-  background-color: transparent; /* Allows background image to peak through */
+  background-color: transparent; 
 }
 .btn-outline-purple:hover {
   background-color: #5850ec;
   color: white;
 }
 
-/* Custom Register Gradient Button 🚀 */
+
 .btn-gradient {
   background: linear-gradient(90deg, #1d4ed8, #7e22ce); 
   border: none;
