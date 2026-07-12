@@ -43,15 +43,20 @@ $cat_result = $conn->query($cat_query);
 
                     <div class="mb-4">
                         <label class="form-label d-block text-center mb-2">Upload Your Artwork Picture</label>
-                        <div class="drag-drop-zone p-4 text-center position-relative" onclick="document.getElementById('artwork_image').click();">
-                            <i class="fa-solid fa-image-regular fa-mountain-sun text-primary fs-1 mb-2 text-muted" style="color:#2563eb !important;"></i>
+
+                        <div class="drag-drop-zone p-4 text-center position-relative">
+                            <i class="fa-solid fa-mountain-sun text-primary fs-1 mb-2 text-muted" style="color:#2563eb !important;"></i>
                             <p class="fw-semibold mb-1 text-dark">Drag and drop image here</p>
                             <span class="text-muted small d-block">Supported formats: JPEG, PNG.</span>
                             <span class="text-muted small d-block mb-3">Max file size: 5MB</span>
-                            <button type="button" class="btn btn-sm btn-outline-secondary px-3 rounded-pill">Browse File</button>
+                            
+                            <span class="btn btn-sm btn-outline-secondary px-3 rounded-pill pointer-events-none">
+                                Browse File
+                            </span>
                             
                             <input type="file" id="artwork_image" name="artwork_image" accept=".jpg, .jpeg, .png" class="position-absolute top-0 start-0 w-100 h-100 opacity-0" style="cursor: pointer;" required onchange="previewFile();">
                         </div>
+                        
                         <div id="imagePreviewContainer" class="mt-3 text-center d-none">
                             <img id="imagePreview" src="#" alt="Artwork Preview" class="img-thumbnail" style="max-height: 200px;">
                         </div>
@@ -87,24 +92,48 @@ $cat_result = $conn->query($cat_query);
         </div>
     </div>
 
-    <?php include_once __DIR__ . '/../includes/footer.php'; ?>
+    
+
+
 
     <script>
     function previewFile() {
-        const preview = document.getElementById('imagePreview');
-        const file = document.getElementById('artwork_image').files[0];
-        const container = document.getElementById('imagePreviewContainer');
+    const fileInput = document.getElementById('artwork_image');
+    const preview = document.getElementById('imagePreview');
+    const container = document.getElementById('imagePreviewContainer');
+    const file = fileInput.files[0];
+    const maxSizeBytes = 5 * 1024 * 1024; 
+    const allowedExtensions = ['image/jpeg', 'image/jpg', 'image/png'];
+
+    if (file) {
+        
+        if (!allowedExtensions.includes(file.type)) {
+            alert("Error: Invalid file format! Only JPG, JPEG, and PNG files are allowed.");
+            fileInput.value = "";
+            container.classList.add('d-none');
+            return; 
+        }
+
+        if (file.size > maxSizeBytes) {
+            alert("Error: File is too large! Maximum limit is 5MB.");
+            fileInput.value = ""; 
+            container.classList.add('d-none'); 
+            return; 
+        }
+
+        
         const reader = new FileReader();
 
         reader.addEventListener("load", function () {
             preview.src = reader.result;
-            container.classList.remove('d-none');
+            container.classList.remove('d-none'); 
         }, false);
 
-        if (file) { reader.readAsDataURL(file); }
+        reader.readAsDataURL(file);
     }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+}
+</script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
 
 <?php include '../includes/footer.php' ?>

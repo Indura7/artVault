@@ -121,8 +121,22 @@
   transform: scale(1.1);
 }
 
-/* Reusing your custom Subscribe Register button styles 🚀 */
 .btn-gradient {
   background: linear-gradient(90deg, #1d4ed8, #7e22ce); 
   border: none;
+}
+
+.drag-drop-zone { 
+    border: 2px dashed #6c5ce7; 
+    border-radius: 12px; 
+    background-color: #ffffff;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.drag-drop-zone:hover { 
+    background-color: #f3f0ff; 
+    border-color: #d53f8c; 
+    transform: scale(1.09);
 }
