@@ -5,6 +5,10 @@
 <?php include '../includes/navbar.php' ?>
 
 <h1>ArtWork Gallery</h1>
+<a href="upload.php">Upload new Artwork</a>
+
+
+
 <?php include '../includes/footer.php' ?>
 </body>
 </html>

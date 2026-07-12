@@ -4,6 +4,8 @@ if(!defined('BASE_URL')){
     define('BASE_URL', 'http://localhost/artvault/'); 
 }
 ?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
