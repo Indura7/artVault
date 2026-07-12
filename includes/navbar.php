@@ -35,11 +35,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?php echo ($current_page == 'artist') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>artist/artist.php">Artists</a>
+          <a class="nav-link <?php echo ($current_page == 'artist.php') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>artist/artist.php">Artists</a>
         </li>
 
         <li class="nav-item">
-         <a class="nav-link <?php echo ($current_page == 'artist') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>about/aboutus.php">About Us</a>
+         <a class="nav-link <?php echo ($current_page == 'aboutus.php') ? 'active' : ''; ?>" href="<?php echo BASE_URL; ?>about/aboutus.php">About Us</a>
         </li>
       </ul>
 

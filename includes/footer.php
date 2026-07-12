@@ -30,8 +30,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
           <li><a href="<?php echo BASE_URL; ?>index.php">Home</a></li>
           <li><a href="<?php echo BASE_URL; ?>artwork/gallery.php">Browse Art</a></li>
           <li><a href="<?php echo BASE_URL; ?>workshop/workshop.php">Workshops</a></li>
-          <li><a href="<?php echo BASE_URL; ?>artist/artist">Artists</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="<?php echo BASE_URL; ?>artist/artist.php">Artists</a></li>
+          <li><a href="<?php echo BASE_URL; ?>about/aboutus.php">About Us</a></li>
         </ul>
       </div>
 
