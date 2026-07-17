@@ -7,7 +7,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     
     
     <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="<?php echo BASE_URL; ?>index.php" style="letter-spacing: 2px;">
-      <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="ArtVault Logo" width="60" height="60" class="d-inline-block align-text-top me-5 scaled-logo"> 
+      <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="ArtVault Logo" width="48" height="48" class="d-inline-block align-text-top me-5 scaled-logo"> 
         ArtVault
     </a>
 
